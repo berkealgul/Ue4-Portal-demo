@@ -34,7 +34,7 @@ APortal::APortal()
 
 	// Create class default sub-objects.
 	RootComponent = CreateDefaultSubobject<USceneComponent>("RootComponent");
-	RootComponent->Mobility = EComponentMobility::Static; // Portals are static objects.
+	RootComponent->Mobility = EComponentMobility::Movable;
 	portalMesh = CreateDefaultSubobject<UStaticMeshComponent>("PortalMesh");
 	portalMesh->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
 	portalMesh->SetCollisionObjectType(ECC_Portal);
